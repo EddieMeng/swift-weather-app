@@ -35,3 +35,10 @@ jobs:
         export PATH=$SWIFT_ANDROID_HOME/bin:$SWIFT_ANDROID_HOME/build-tools/current:$PATH;
         cd android;
         ./gradlew app:build
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: App
+        path: ${{ github.workspace }}/app/build/outputs/apk/debug/app-debug.apk
+
