@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
+
         val viewManager = LinearLayoutManager(this)
         weatherLocationAdapter = WeatherLocationAdapter(emptyList()) {
             removeLocation(it)
