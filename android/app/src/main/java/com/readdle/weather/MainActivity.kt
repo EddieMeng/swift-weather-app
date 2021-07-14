@@ -98,6 +98,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun removeLocation(location: Location) {
+        
         AlertDialog.Builder(this)
             .setMessage("Are you sure you want to delete " + location.title + " from saved?")
             .setPositiveButton("Yes") { dialog, _ ->
