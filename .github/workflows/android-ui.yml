@@ -21,7 +21,7 @@ jobs:
         unzip android-ndk-r17c-darwin-x86_64.zip
     - name: Install Swift Android Toolchain
       run: SWIFT_ANDROID=$(curl --silent "https://api.github.com/repos/readdle/swift-android-toolchain/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/');
-        wget https://github.com/readdle/swift-android-toolchain/releases/latest/download/swift-android-$SWIFT_ANDROID.zip;
+        wget https://github.com/readdle/swift-android-toolchain/releases/latest/download/swift-android-5.0-r13.zip;
         unzip swift-android-$SWIFT_ANDROID.zip;
         rm -rf swift-android-$SWIFT_ANDROID.zip;
         swift-android-$SWIFT_ANDROID/bin/swift-android tools --update;
