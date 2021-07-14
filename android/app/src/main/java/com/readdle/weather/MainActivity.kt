@@ -26,7 +26,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
+
 
         val viewManager = LinearLayoutManager(this)
         weatherLocationAdapter = WeatherLocationAdapter(emptyList()) {
@@ -96,6 +98,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun removeLocation(location: Location) {
+        
         AlertDialog.Builder(this)
             .setMessage("Are you sure you want to delete " + location.title + " from saved?")
             .setPositiveButton("Yes") { dialog, _ ->
